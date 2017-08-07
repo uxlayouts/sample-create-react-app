@@ -1,0 +1,69 @@
+
+// ------------------------------------------------------------------
+//  Variables
+// ------------------------------------------------------------------
+
+//  Colors
+// ------------------------------------------------------------------
+
+// Purple - Light to Dark
+$primary1: #8875ff;
+$primary2: #6752ee;
+$primary3: #39208f;
+
+// Pinkish Red - Light to Dark
+$secondary1: #dc2e9b;
+$secondary2: #af006e;
+$secondary3: #6e1f56;
+
+// Grays - Light to Dark
+$gray1: #ffffff;
+$gray2: #f9fafc;
+$gray3: #eef1f7;
+
+$gray4: #d7dfe9;
+$gray5: #b8c4d4;
+$gray6: #909fb3;
+
+$gray7: #525963;
+$gray8: #313a44;
+$gray9: #191f26;
+
+
+//  Placement
+// ------------------------------------------------------------------
+
+// Base 8 Grid
+$base0: 0.5rem; // 4px
+$base1: 0.5rem; // 8px
+$base2: 1.0rem; // 16px
+$base3: 1.5rem; // 24px
+$base4: 2.0rem; // 32px
+$base5: 2.5rem; // 40px
+$base6: 4.0rem; // 64px
+
+//  Treatments
+// ------------------------------------------------------------------
+
+$radius1: $base0; // 4px
+$radius2: $base2; // 16px
+
+//  Typography
+// ------------------------------------------------------------------
+
+// Resposive Typography
+// Minimum and maximum viewport sizes to apply the font scaling
+$minWidth: 400;
+$maxWidth: 998;
+// The range of base font-size, headings etc will scale proportionally
+$minFont: 16;
+$maxFont: 21;
+
+// Default Font Colors
+$bodyFontColor: $gray7;
+$titleFontColor: $gray9;
+
+// Default CTA Colors
+$ctaColor: $primary1;
+$ctaColorHover: $primary2;
+$ctaColorFocus: $primary3;

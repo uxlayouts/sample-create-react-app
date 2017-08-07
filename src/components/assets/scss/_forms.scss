@@ -1,0 +1,159 @@
+
+// ==========================================================================
+// Forms
+// ==========================================================================
+
+// Form Inputs
+// ==========================================================================
+
+input:not([type=checkbox]):not([type=radio]), textarea{
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: .25rem;
+  color: $bodyFontColor;
+  display: block;
+  min-width: 100%;
+  margin: 0 auto 1rem;
+  height: 60px !important;
+  font-size: 1rem;
+}
+textarea{
+  height: 100px !important;
+}
+
+
+// Custom Checkboxes and Radios
+// ==========================================================================
+
+// Inputs - Hide them
+input[type=radio],
+input[type=checkbox] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 1px;
+  visibility: hidden;
+  border-radius: 100%;
+}
+// Icons Unchecked
+input[type=radio] ~ label,
+input[type=checkbox] ~ label {
+  &:hover{
+    cursor: pointer;
+  }
+}
+// Icons Unchecked
+input[type=radio] ~ label:before,
+input[type=checkbox] ~ label:before {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 8px;
+  margin-right: 12px;
+  content: '';
+  border-radius: 50%;
+  border: 2px solid $gray4;
+}
+// Icons Unchecked
+input[type=checkbox] ~ label:before {
+  border-radius: 0.0rem;
+}
+// Icons Checked
+input[type=radio]:checked ~ label:before,
+input[type=checkbox]:checked ~ label:before  {}
+// Radio
+input[type=radio] ~ label:before {}
+// Radio Checked
+input[type=radio]:checked ~ label:before {
+  border: 2px solid $ctaColor;
+}
+// Icons Unchecked
+input[type=radio] ~ label:after,
+input[type=checkbox] ~ label:after {
+}
+input[type=radio]:checked ~ label:after {
+  display: block;
+  content: '';
+  float: left;
+  background: $ctaColor;
+  margin-left: -1rem;
+  border-radius: 50%;
+  position: relative;
+  left: 24px;
+  top: 16px;
+  width: 1rem;
+  height: 1rem;
+}
+// Checkbox
+input[type=checkbox] ~ label:before {}
+// Checkbox Checked
+input[type=checkbox]:checked ~ label:before {
+  border: 2px solid $ctaColor;
+}
+input[type=checkbox]:checked ~ label:after {
+  display: block;
+  content: '';
+  float: left;
+  border: solid $ctaColor;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin-left: -1rem;
+  position: relative;
+  top: 15px;
+  left: 28px;
+  width: 8px;
+  height: 14px;
+}
+// Disabled
+input[type=radio]:disabled ~ label,
+input[type=checkbox]:disabled ~ label {
+  opacity: .5;
+  cursor: not-allowed;
+  &:before{
+    opacity: .5;
+    cursor: not-allowed;
+  }
+}
+
+
+// Floating Label Inputs
+// ==========================================================================
+
+// Floating Labels
+.placeholder {
+  position: relative;
+  margin-bottom: 32px;
+  input {
+    height: 64px;
+  }
+  label {
+    cursor: text;
+    font-size: 1.125rem;
+    letter-spacing: 0.05rem;
+    left: 1.0rem;
+    color: $bodyFontColor;
+    pointer-events: none;
+    position: absolute;
+    top: 1.3125rem;
+    transition: top 0.2s linear 0.0s, left 0.2s linear 0.0s;
+   }
+  &.open {
+    label {
+      color: $ctaColor;
+      position: absolute;
+      top: .375rem;
+      font-size: 0.75rem;
+    }
+  }
+  &.focused {
+    label {
+      color: $titleFontColor;
+    }
+  }
+}

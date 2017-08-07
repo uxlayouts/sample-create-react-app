@@ -1,0 +1,110 @@
+// ==========================================================================
+// Layout
+// ==========================================================================
+
+// Responsive Container
+// ==========================================================================
+
+.responsive-container{
+	padding-right: $base2 !important;
+	padding-left: $base2 !important;
+}
+.responsive-container-1{
+	padding-right: $base4 !important;
+	padding-left: $base4 !important;
+}
+
+@media (max-width: 998px) {
+
+  .responsive-container{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .responsive-container-1{
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+}
+
+.center-items{
+	width: 100%;
+	text-align: center;
+	button{
+		&:first-of-type{
+			margin-right: $base2;
+		}
+	}
+}
+
+.wrapperFull {
+  display: grid;
+  grid-template-columns: 1fr;
+	//grid-auto-rows: minmax(80vh, auto);
+	//justify-items: stretch;
+	//align-items: stretch;
+  grid-gap: $base2;
+}
+
+// Sidebar Layout
+// ==========================================================================
+
+.wrapperSidebar {
+  display: grid;
+  grid-template-columns: 77vw 20vw;
+	//grid-auto-rows: minmax(80vh, auto);
+  grid-gap: 0;
+	.card{
+		margin-top: $base4;
+	}
+	.sidebar{
+		min-height: 100vh;
+		background: $gray7;
+		padding: $base3;
+		.menu{
+	    a{
+	      text-decoration: none;
+	      margin: 0 $base1;
+	      color: $gray5;
+	      display: block;
+	      &.active{
+	        color: $gray1;
+	      }
+	    }
+	  }
+	}
+}
+
+// Grid Layout TODO change name to grid
+// ==========================================================================
+
+.wrapperCard {
+  display: grid;
+  grid-gap: $base2;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+	@media (max-width: 1400px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media (max-width: 1100px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media (max-width: 600px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+// .wrapperSignup {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 10px;
+//   grid-auto-rows: 200px;
+//   grid-template-areas:
+//     ". a a ."
+//     ". a a .";
+// }
+// .card {
+//   grid-area: a;
+//   align-self: center;
+//   justify-self: center;
+// }
