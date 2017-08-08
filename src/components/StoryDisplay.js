@@ -1,27 +1,34 @@
 import React from 'react';
-import { object } from 'prop-types';
+import moment from 'moment';
 
-const StoryDisplay = ({ id, title, body }, { router }) => {
-
-  const goBack = (event) => {
-    router.history.goBack()
-  };
-
+const StoryDisplay = ({ id, title, body, dateCreated, inEdit, toggleEdit, updateStory, deleteStory }) => {
   return (
-    <div>
-      <button className="btn-hollow pull-right" onClick={goBack}>All Stories</button>
-      <br /><br /><br />
-      <div className="card tall">
-        <h2>Story {id}</h2>
-        <h2>{title}</h2>
-        <p>{body}</p>
-      </div>
+    <div className="card tall">
+      {inEdit ?
+        <div>
+          <input id="title" defaultValue={title} />
+          <textarea id="body" defaultValue={body} />
+          <button onClick={updateStory}>Update</button>
+          <button className="btn-hollow" onClick={toggleEdit}>Cancel</button>
+        </div>
+        :
+        <div>
+          <h2>{title}</h2>
+          <p>{body}</p>
+          <small>{moment(dateCreated).fromNow()}</small>
+          <p className="link" onClick={e => updateStory(e, id, title, body)}>Edit</p>
+          <p className="link" onClick={e => deleteStory(e, id)}>Delete</p>
+        </div>
+      }
     </div>
   );
 }
 
-StoryDisplay.contextTypes = {
-  router: object,
-}
-
 export default StoryDisplay;
+
+// <div className="card tall">
+//   <p className="link" onClick={toggleEdit}>{inEdit ? 'Cancel' : 'Edit'}</p>
+//   {inEdit ? <input id="title" defaultValue={title} /> : <h2>{title}</h2>}
+//   {inEdit ? <textarea id="body" defaultValue={body} /> : <p>{body}</p>}<br />
+//   {inEdit ? <button onClick={updateStory}>Update</button> : <small>{moment(dateCreated).fromNow()}</small>}<br />
+// </div>

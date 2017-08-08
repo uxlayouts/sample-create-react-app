@@ -3,7 +3,7 @@
     {
       "userId": 1,
       "id": 1,
-      "dateCreated": "2017-08-08T14:50:23.314Z",
+      "dateCreated": 1502022392133,
       "title": "Your Key To Success: Developers",
       "body": "quia et suscipitsuscipit recusandae consequuntur expedita et cumreprehenderit molestiae ut ut quas totam"
     },
@@ -253,6 +253,10 @@
       "body": "ad mollitia et omnis minus architecto oditvoluptas doloremque maxime aut non ipsa qui alias veniam"
     }
   ],
-  "users": [],
-  "userTypes": []
+  "users": [
+
+  ],
+  "userTypes": [
+
+  ]
 }
