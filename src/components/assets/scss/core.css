@@ -257,8 +257,6 @@ input[type=checkbox]:disabled ~ label {
   box-shadow: 0 4px 8px 0 rgba(144, 159, 179, 0.4);
   padding: 1.5rem;
   text-align: center; }
-  .card.tall {
-    min-height: 75vh; }
 
 /* -----------------------------------------------------------------------------
   HAMBURGER ICONS COMPONENT
