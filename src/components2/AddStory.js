@@ -28,8 +28,28 @@ const AddStory = (props, { router }) => {
 
         </div>
 
+          <label>Tags</label><br />
+          <input type="text" />
+
+          <p>
+						<input type="radio" id="radio01" name="radio" defaultChecked="checked" />
+						<label htmlFor="radio01"><span></span>Radio Button 1</label>
+					</p>
+					<p>
+						<input type="radio" id="radio02" name="radio" />
+						<label htmlFor="radio02"><span></span>Radio Button 2</label>
+					</p>
+					<p>
+						<input type="checkbox" id="radio04" name="radioother" defaultChecked="checked" disabled="disabled" />
+						<label htmlFor="radio04"><span></span>Radio Button 4</label>
+					</p>
+					<p>
+						<input type="checkbox" id="radio05" name="radioother2" disabled="disabled" />
+						<label htmlFor="radio05"><span></span>Radio Button 5</label>
+					</p>
+
           <br />
-          <button onClick={() => updateStory(id, title, body)}>Save</button>
+          <button onClick={navTo}>Save</button>
         </div>
       </div>
     </div>

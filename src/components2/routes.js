@@ -9,8 +9,6 @@ import NotFound from './NotFound';
 import Stories from './Stories';
 import Story from './Story';
 
-// A route config is just data. React is great at mapping
-// data into components, and <Route> is a component.
 // Animations: pop | slideRight | slideLeft | slideUp | slideDown
 
 export default [

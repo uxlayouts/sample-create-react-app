@@ -1,0 +1,580 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+body, form, fieldset, legend, input, select, textarea, button {
+  margin: 0; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+img {
+  border: 0;
+  display: block; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+  *:focus {
+    outline: 0; }
+
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.pull-right {
+  float: right !important; }
+
+.pull-left {
+  float: left !important; }
+
+.vertCenter {
+  display: table;
+  width: 100%; }
+  .vertCenter .item {
+    display: table-cell;
+    vertical-align: middle; }
+
+.img-responsive {
+  max-width: 100%; }
+
+html, body {
+  overflow-x: hidden;
+  background: #eef1f7;
+  font-family: 'lato', helvetica, arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.03rem;
+  color: #525963;
+  -webkit-overflow-scrolling: touch;
+  /* enables momentum scrolling in iOS overflow elements */ }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #191f26;
+  margin: 0;
+  line-height: 1.1; }
+
+a, .link {
+  color: #8875ff;
+  text-decoration: none; }
+  a:hover, a:active, a.active, .link:hover, .link:active, .link.active {
+    color: #6752ee; }
+  a:focus, .link:focus {
+    color: #39208f; }
+
+:root {
+  font-size: 16px; }
+
+@media (min-width: 400px) and (max-width: 998px) {
+  :root {
+    font-size: calc( 16px + (21 - 16) * ( (100vw - 400px) / ( 998 - 400) )); } }
+
+@media (min-width: 998px) {
+  :root {
+    font-size: 21px; } }
+
+.btn, button, input[type=submit] {
+  height: 60px;
+  background: #8875ff;
+  color: #ffffff;
+  border: 2px solid #8875ff;
+  transition: all .25s;
+  display: inline-block;
+  font-size: 1.0rem;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 3rem;
+  padding: .7rem 3rem; }
+  @media (max-width: 998px) {
+    .btn, button, input[type=submit] {
+      padding: 1rem 2.5rem; } }
+  .btn.btn-square, button.btn-square, input[type=submit].btn-square {
+    border-radius: 0; }
+  .btn:hover, .btn:active, .btn.active, button:hover, button:active, button.active, input[type=submit]:hover, input[type=submit]:active, input[type=submit].active {
+    background: #6752ee;
+    border: 2px solid #6752ee; }
+  .btn:focus, button:focus, input[type=submit]:focus {
+    background: #39208f;
+    border: 2px solid #39208f; }
+  .btn.btn-hollow, button.btn-hollow, input[type=submit].btn-hollow {
+    background: transparent;
+    color: #8875ff;
+    border: 2px solid #6752ee; }
+    .btn.btn-hollow:hover, .btn.btn-hollow:active, .btn.btn-hollow.active, button.btn-hollow:hover, button.btn-hollow:active, button.btn-hollow.active, input[type=submit].btn-hollow:hover, input[type=submit].btn-hollow:active, input[type=submit].btn-hollow.active {
+      background: #6752ee;
+      color: #ffffff;
+      border: 2px solid #6752ee; }
+    .btn.btn-hollow:focus, button.btn-hollow:focus, input[type=submit].btn-hollow:focus {
+      background: #39208f;
+      border: 2px solid #39208f; }
+
+input:not([type=checkbox]):not([type=radio]), textarea {
+  background: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: .25rem;
+  color: #525963;
+  display: block;
+  min-width: 100%;
+  margin: 0 auto 1rem;
+  height: 60px !important;
+  font-size: 1rem; }
+
+textarea {
+  height: 100px !important; }
+
+input[type=radio],
+input[type=checkbox] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 1px;
+  visibility: hidden;
+  border-radius: 100%; }
+
+input[type=radio] ~ label:hover,
+input[type=checkbox] ~ label:hover {
+  cursor: pointer; }
+
+input[type=radio] ~ label:before,
+input[type=checkbox] ~ label:before {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 8px;
+  margin-right: 12px;
+  content: '';
+  border-radius: 50%;
+  border: 2px solid #d7dfe9; }
+
+input[type=checkbox] ~ label:before {
+  border-radius: 0.0rem; }
+
+input[type=radio]:checked ~ label:before {
+  border: 2px solid #8875ff; }
+
+input[type=radio]:checked ~ label:after {
+  display: block;
+  content: '';
+  float: left;
+  background: #8875ff;
+  margin-left: -1rem;
+  border-radius: 50%;
+  position: relative;
+  left: 24px;
+  top: 16px;
+  width: 1rem;
+  height: 1rem; }
+
+input[type=checkbox]:checked ~ label:before {
+  border: 2px solid #8875ff; }
+
+input[type=checkbox]:checked ~ label:after {
+  display: block;
+  content: '';
+  float: left;
+  border: solid #8875ff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  margin-left: -1rem;
+  position: relative;
+  top: 15px;
+  left: 28px;
+  width: 8px;
+  height: 14px; }
+
+input[type=radio]:disabled ~ label,
+input[type=checkbox]:disabled ~ label {
+  opacity: .5;
+  cursor: not-allowed; }
+  input[type=radio]:disabled ~ label:before,
+  input[type=checkbox]:disabled ~ label:before {
+    opacity: .5;
+    cursor: not-allowed; }
+
+.placeholder {
+  position: relative;
+  margin-bottom: 32px; }
+  .placeholder input {
+    height: 64px; }
+  .placeholder label {
+    cursor: text;
+    font-size: 1.125rem;
+    letter-spacing: 0.05rem;
+    left: 1.0rem;
+    color: #525963;
+    pointer-events: none;
+    position: absolute;
+    top: 1.3125rem;
+    transition: top 0.2s linear 0.0s, left 0.2s linear 0.0s; }
+  .placeholder.open label {
+    color: #8875ff;
+    position: absolute;
+    top: .375rem;
+    font-size: 0.75rem; }
+  .placeholder.focused label {
+    color: #191f26; }
+
+.card {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(144, 159, 179, 0.4);
+  padding: 1.5rem;
+  text-align: center; }
+
+/* -----------------------------------------------------------------------------
+  HAMBURGER ICONS COMPONENT
+----------------------------------------------------------------------------- */
+/**
+ * Toggle Switch Globals
+ *
+ * All switches should take on the class `c-hamburger` as well as their
+ * variant that will give them unique properties. This class is an overview
+ * class that acts as a reset for all versions of the icon.
+ */
+.c-hamburger {
+  background: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+  font-size: 0;
+  text-indent: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s; }
+  .c-hamburger:hover {
+    border: none;
+    background: none; }
+
+.c-hamburger {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  float: right;
+  display: none; }
+  @media (max-width: 998px) {
+    .c-hamburger {
+      display: block;
+      margin-right: -.5rem; } }
+
+.c-hamburger:focus {
+  background: none;
+  outline: none;
+  border: none; }
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: white; }
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  content: ""; }
+
+.c-hamburger span::before {
+  top: -12px; }
+
+.c-hamburger span::after {
+  bottom: -12px; }
+
+/**
+ * Style 1
+ *
+ * Rotating hamburger icon (rot), that simply rotates 90 degrees when activated.
+ * Nothing too fancy, simple transition.
+ */
+.c-hamburger--rot span {
+  transition: transform 0.3s; }
+
+/* active state, i.e. menu open */
+.c-hamburger--rot.is-active span {
+  transform: rotate(90deg); }
+
+/**
+ * Style 2
+ *
+ * Hamburger to "x" (htx). Takes on a hamburger shape, bars slide
+ * down to center and transform into an "x".
+ */
+.c-hamburger--htx span {
+  transition: background 0s 0.3s; }
+
+.c-hamburger--htx span::before,
+.c-hamburger--htx span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s; }
+
+.c-hamburger--htx span::before {
+  transition-property: top, transform; }
+
+.c-hamburger--htx span::after {
+  transition-property: bottom, transform; }
+
+/* active state, i.e. menu open */
+.c-hamburger--htx.is-active span {
+  background: none; }
+
+.c-hamburger--htx.is-active span::before {
+  top: 0;
+  transform: rotate(45deg); }
+
+.c-hamburger--htx.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg); }
+
+.c-hamburger--htx.is-active span::before,
+.c-hamburger--htx.is-active span::after {
+  transition-delay: 0s, 0.3s; }
+
+/**
+ * Style 3
+ *
+ * Hamburger to left-arrow (htla). Hamburger menu transforms to a left-pointing
+ * arrow. Usually indicates an off canvas menu sliding in from left that
+ * will be close on re-click of the icon.
+ */
+.c-hamburger--htla span {
+  transition: transform 0.3s; }
+
+.c-hamburger--htla span::before {
+  transform-origin: top right;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.c-hamburger--htla span::after {
+  transform-origin: bottom right;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.c-hamburger--htla.is-active span {
+  transform: rotate(180deg); }
+
+.c-hamburger--htla.is-active span::before,
+.c-hamburger--htla.is-active span::after {
+  width: 50%; }
+
+.c-hamburger--htla.is-active span::before {
+  top: 0;
+  transform: translateX(22px) translateY(1px) rotate(45deg); }
+
+.c-hamburger--htla.is-active span::after {
+  bottom: 0;
+  transform: translateX(22px) translateY(-1px) rotate(-45deg); }
+
+/**
+ * Style 4
+ *
+ * Hamburger to right-arrow (htra). Hamburger menu transforms to a
+ * right-pointing arrow. Usually indicates an off canvas menu sliding in from
+ * right that will be close on re-click of the icon.
+ */
+.c-hamburger--htra span {
+  transition: transform 0.3s; }
+
+.c-hamburger--htra span::before {
+  transform-origin: top left;
+  transition: transform 0.3s, width 0.3s, top 0.3s; }
+
+.c-hamburger--htra span::after {
+  transform-origin: bottom left;
+  transition: transform 0.3s, width 0.3s, bottom 0.3s; }
+
+/* active state, i.e. menu open */
+.c-hamburger--htra.is-active span {
+  transform: rotate(180deg); }
+
+.c-hamburger--htra.is-active span::before,
+.c-hamburger--htra.is-active span::after {
+  width: 50%; }
+
+.c-hamburger--htra.is-active span::before {
+  top: 0;
+  transform: translateX(-2px) translateY(1px) rotate(-45deg); }
+
+.c-hamburger--htra.is-active span::after {
+  bottom: 0;
+  transform: translateX(-2px) translateY(-1px) rotate(45deg); }
+
+.logo {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  width: 80px;
+  margin-left: .5rem; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.header {
+  display: table;
+  width: 100%;
+  background: #525963;
+  color: #ffffff;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  transition: height .25s ease-in-out;
+  height: 4.5rem; }
+  .header .menu {
+    transition: opacity .25s .25s linear;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right; }
+    .header .menu a {
+      text-decoration: none;
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      color: #b8c4d4;
+      display: inline-block;
+      margin-right: 1.5rem; }
+      .header .menu a:hover, .header .menu a:active, .header .menu a.active {
+        color: #ffffff; }
+      .header .menu a:focus {
+        color: #191f26; }
+  @media (max-width: 998px) {
+    .header .menu {
+      float: none;
+      opacity: 0; }
+      .header .menu a {
+        display: none;
+        padding: .25rem; }
+    .header .logo {
+      transition: opacity .25s .2s linear;
+      opacity: 1;
+      margin-left: -.5rem; }
+    .header.is-active {
+      transition: all .3s linear;
+      height: 100vh; }
+      .header.is-active .logo {
+        opacity: 0; }
+      .header.is-active .menu {
+        opacity: 1;
+        justify-self: center; }
+        .header.is-active .menu a {
+          display: block;
+          text-align: center;
+          float: none; } }
+
+.footer {
+  color: #b8c4d4;
+  padding: 1.5rem;
+  text-align: center; }
+
+.responsive-container {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important; }
+
+.responsive-container-1 {
+  padding-right: 2rem !important;
+  padding-left: 2rem !important; }
+
+@media (max-width: 998px) {
+  .responsive-container {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+  .responsive-container-1 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important; } }
+
+.center-items {
+  width: 100%;
+  text-align: center; }
+  .center-items button:first-of-type {
+    margin-right: 1rem; }
+
+.wrapperFull {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem; }
+
+.wrapperSidebar {
+  display: grid;
+  grid-template-columns: 77vw 20vw;
+  grid-gap: 0; }
+  .wrapperSidebar .card {
+    margin-top: 2rem; }
+  .wrapperSidebar .sidebar {
+    min-height: 100vh;
+    background: #525963;
+    padding: 1.5rem; }
+    .wrapperSidebar .sidebar .menu a {
+      text-decoration: none;
+      margin: 0 0.5rem;
+      color: #b8c4d4;
+      display: block; }
+      .wrapperSidebar .sidebar .menu a.active {
+        color: #ffffff; }
+
+.wrapperCard {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto); }
+  @media (max-width: 1400px) {
+    .wrapperCard {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 1100px) {
+    .wrapperCard {
+      grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 600px) {
+    .wrapperCard {
+      grid-template-columns: repeat(1, 1fr); } }

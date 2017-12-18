@@ -1,0 +1,15 @@
+
+// ==========================================================================
+// Card
+// ==========================================================================
+
+.card{
+  background: $gray1; // #ffffff
+  border-radius: $radius1; // 4px
+  box-shadow: 0 4px 8px 0 rgba(144,159,179,.4);
+  padding: $base3; // 24px
+  text-align: center;
+  // &.tall{
+  //   min-height: 75vh;
+  // }
+}

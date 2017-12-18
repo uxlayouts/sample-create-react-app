@@ -256,6 +256,45 @@
   "users": [
 
   ],
+  "workout": [
+    {
+      "id": 0,
+      "title": "Barbell Curls",
+      "description": "A barbell curl is a pull-type, isolation exercise which works primarily your biceps, but also trains muscles in your forearms and shoulders.",
+      "image": "https://media.giphy.com/media/ND1r9zoBPgfC/giphy.gif",
+      "videoUrl": "",
+      "areasWorked": [ "Biceps", "Brachii" ],
+      "workoutType": 0,
+      "difficulty": 3,
+      "equitment": [ "barbells" ],
+      "timeAverage": 5,
+      "timeCreated": "",
+      "author": 0
+    }
+  ],
+  "workoutType": [
+    {
+      "id": 0,
+      "timeCreated": "",
+      "title": "Weight Lifting",
+      "image": "",
+      "videoUrl": ""
+    }
+  ],
+  "workoutResult": [
+    {
+      "id": 0,
+      "timeStarted": "",
+      "timeEnded": "",
+      "workout": 0,
+      "measure": "",
+      "result": "",
+      "image": "https://media.giphy.com/media/ND1r9zoBPgfC/giphy.gif",
+      "videoUrl": "",
+      "timeCreated": "",
+      "author": 0
+    }
+  ],
   "userTypes": [
 
   ]

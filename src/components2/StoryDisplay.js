@@ -39,3 +39,10 @@ const StoryDisplay = ({
 )
 
 export default StoryDisplay;
+
+// <div className="card tall">
+//   <p className="link" onClick={toggleEdit}>{inEdit ? 'Cancel' : 'Edit'}</p>
+//   {inEdit ? <input id="title" defaultValue={title} /> : <h2>{title}</h2>}
+//   {inEdit ? <textarea id="body" defaultValue={body} /> : <p>{body}</p>}<br />
+//   {inEdit ? <button onClick={updateStory}>Update</button> : <small>{moment(dateCreated).fromNow()}</small>}<br />
+// </div>

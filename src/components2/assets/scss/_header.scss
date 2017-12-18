@@ -1,0 +1,83 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.logo {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  width: 80px;
+  margin-left: .5rem;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header {
+  display: table;
+  width: 100%;
+  background: $gray7;
+  color: $gray1;
+  padding: $base1;
+  margin-bottom: $base3;
+  transition: height .25s ease-in-out;
+  height: 4.5rem;
+  .menu{
+    transition: opacity .25s .25s linear;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    a{
+      text-decoration: none;
+      margin-left: $base1;
+      margin-right: $base1;
+      color: $gray5;
+      display: inline-block;
+      margin-right: 1.5rem;
+      &:hover,
+      &:active,
+      &.active{
+        color: $gray1;
+      }
+      &:focus{
+        color: $gray9;
+      }
+    }
+  }
+  @media (max-width: 998px) {
+    .menu{
+      float: none;
+      opacity: 0;
+      a{
+        display: none;
+        padding: .25rem;
+      }
+    }
+    .logo{
+      transition: opacity .25s .2s linear;
+      opacity: 1;
+      margin-left: -.5rem;
+    }
+    &.is-active{
+      transition: all .3s linear;
+      height: 100vh;
+      .logo{
+        opacity: 0;
+      }
+      .menu{
+        opacity: 1;
+        justify-self: center;
+        a{
+          display: block;
+          text-align: center;
+          float: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.btn, button, input[type=submit]{
+  height: 60px;
+  background: $ctaColor;
+  color: $gray1;
+  border: 2px solid $ctaColor;
+  transition: all .25s;
+  display: inline-block;
+  font-size: 1.0rem;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+  border-radius: 3rem;
+  padding: .7rem 3rem;
+  @media (max-width: 998px) {
+    padding: 1rem 2.5rem;
+  }
+  &.btn-square{
+    border-radius: 0;
+  }
+  &:hover,
+  &:active,
+  &.active{
+    background: $ctaColorHover;
+    border: 2px solid $ctaColorHover;
+  }
+  &:focus{
+    background: $ctaColorFocus;
+    border: 2px solid $ctaColorFocus;
+  }
+  &.btn-hollow{
+    background: transparent;
+    color: $ctaColor;
+    border: 2px solid $primary2;
+    &:hover,
+    &:active,
+    &.active{
+      background: $ctaColorHover;
+      color: $gray1;
+      border: 2px solid $ctaColorHover;
+    }
+    &:focus{
+      background: $ctaColorFocus;
+      border: 2px solid $ctaColorFocus;
+    }
+  }
+}
